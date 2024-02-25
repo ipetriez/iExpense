@@ -13,7 +13,7 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             List {
-                ForEach(expenses.items, id: \.name) { item in
+                ForEach(expenses.items) { item in
                     Text(item.name)
                 }
                 // MARK: — Simpler approach for calling func removeItems(at:)
@@ -25,7 +25,7 @@ struct ContentView: View {
             .navigationTitle("iExpense")
             .toolbar {
                 Button("Add expense", systemImage: "plus") {
-                    let expense = ExpenseItem(name: "Test", type: "Personal", amount: 5)
+                    let expense = ExpenseItem(id: UUID(), name: "Test", type: "Personal", amount: 5)
                     expenses.items.append(expense)
                 }
             }
