@@ -26,12 +26,11 @@ struct ExpensesView: View {
             .navigationTitle("iExpense")
             .toolbar {
                 Button("Add expense", systemImage: "plus") {
-                    let expense = ExpenseItem(id: UUID(), name: "Test", type: "Personal", amount: 5)
-                    expenses.items.append(expense)
+                    showingAddExpenseView.toggle()
                 }
             }
             .sheet(isPresented: $showingAddExpenseView) {
-                AddExpenseView()
+                AddExpenseView(expenses: expenses)
             }
         }
     }
