@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct AddExpenseView: View {
+    @Environment(\.dismiss) var dismiss
     @State private var name = ""
     @State private var type = "Personal"
     @State private var amount = 0.0
@@ -28,6 +29,13 @@ struct AddExpenseView: View {
                     .keyboardType(.decimalPad)
             }
             .navigationTitle("Add new expense")
+            .toolbar {
+                Button("Save") {
+                    let item = ExpenseItem(id: UUID(), name: name, type: type, amount: amount)
+                    expenses.items.append(item)
+                    dismiss()
+                }
+            }
         }
     }
 }
