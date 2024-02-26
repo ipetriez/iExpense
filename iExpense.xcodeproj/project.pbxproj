@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		7004C8CD2B8C749800A7C041 /* AddExpenseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7004C8CC2B8C749800A7C041 /* AddExpenseView.swift */; };
 		706B581E2B8B8B0D00DE6A3F /* iExpenseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706B581D2B8B8B0D00DE6A3F /* iExpenseApp.swift */; };
-		706B58202B8B8B0D00DE6A3F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706B581F2B8B8B0D00DE6A3F /* ContentView.swift */; };
+		706B58202B8B8B0D00DE6A3F /* ExpensesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706B581F2B8B8B0D00DE6A3F /* ExpensesView.swift */; };
 		706B58222B8B8B0E00DE6A3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 706B58212B8B8B0E00DE6A3F /* Assets.xcassets */; };
 		706B58252B8B8B0E00DE6A3F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 706B58242B8B8B0E00DE6A3F /* Preview Assets.xcassets */; };
 		706B582C2B8B8B4800DE6A3F /* ExpenseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706B582B2B8B8B4800DE6A3F /* ExpenseItem.swift */; };
@@ -20,7 +20,7 @@
 		7004C8CC2B8C749800A7C041 /* AddExpenseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseView.swift; sourceTree = "<group>"; };
 		706B581A2B8B8B0D00DE6A3F /* iExpense.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iExpense.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		706B581D2B8B8B0D00DE6A3F /* iExpenseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iExpenseApp.swift; sourceTree = "<group>"; };
-		706B581F2B8B8B0D00DE6A3F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		706B581F2B8B8B0D00DE6A3F /* ExpensesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesView.swift; sourceTree = "<group>"; };
 		706B58212B8B8B0E00DE6A3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		706B58242B8B8B0E00DE6A3F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		706B582B2B8B8B4800DE6A3F /* ExpenseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseItem.swift; sourceTree = "<group>"; };
@@ -58,7 +58,7 @@
 			isa = PBXGroup;
 			children = (
 				706B581D2B8B8B0D00DE6A3F /* iExpenseApp.swift */,
-				706B581F2B8B8B0D00DE6A3F /* ContentView.swift */,
+				706B581F2B8B8B0D00DE6A3F /* ExpensesView.swift */,
 				7004C8CC2B8C749800A7C041 /* AddExpenseView.swift */,
 				706B582B2B8B8B4800DE6A3F /* ExpenseItem.swift */,
 				706B582F2B8B8C4F00DE6A3F /* Expenses.swift */,
@@ -147,7 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				706B58302B8B8C4F00DE6A3F /* Expenses.swift in Sources */,
-				706B58202B8B8B0D00DE6A3F /* ContentView.swift in Sources */,
+				706B58202B8B8B0D00DE6A3F /* ExpensesView.swift in Sources */,
 				7004C8CD2B8C749800A7C041 /* AddExpenseView.swift in Sources */,
 				706B582C2B8B8B4800DE6A3F /* ExpenseItem.swift in Sources */,
 				706B581E2B8B8B0D00DE6A3F /* iExpenseApp.swift in Sources */,

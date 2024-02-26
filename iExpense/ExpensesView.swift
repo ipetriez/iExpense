@@ -7,8 +7,9 @@
 
 import SwiftUI
 
-struct ContentView: View {
-    @State var expenses = Expenses()
+struct ExpensesView: View {
+    @State private var expenses = Expenses()
+    @State private var showingAddExpenseView = false
     
     var body: some View {
         NavigationStack {
@@ -29,6 +30,9 @@ struct ContentView: View {
                     expenses.items.append(expense)
                 }
             }
+            .sheet(isPresented: $showingAddExpenseView) {
+                AddExpenseView()
+            }
         }
     }
     
@@ -38,5 +42,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    ExpensesView()
 }
