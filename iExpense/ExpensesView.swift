@@ -23,7 +23,7 @@ struct ExpensesView: View {
                         }
                         Spacer()
                         
-                        Text(item.amount, format: .currency(code: "USD"))
+                        Text(item.amount, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
                     }
                 }
                 // MARK: — Simpler approach for calling func removeItems(at:)
