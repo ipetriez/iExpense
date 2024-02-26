@@ -7,6 +7,14 @@
 
 import Foundation
 
+enum ExpenseType: String {
+    case personal, business
+    
+    var title: String {
+        self.rawValue.capitalized
+    }
+}
+
 struct ExpenseItem: Codable, Identifiable {
     var id = UUID()
     let name: String

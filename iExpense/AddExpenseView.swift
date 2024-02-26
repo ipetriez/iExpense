@@ -12,7 +12,7 @@ struct AddExpenseView: View {
     @State private var name = ""
     @State private var type = "Personal"
     @State private var amount = 0.0
-    let types = ["Business", "Personal"]
+    let types: [ExpenseType] = [.business, .personal]
     var expenses: Expenses
     
     var body: some View {
@@ -21,11 +21,11 @@ struct AddExpenseView: View {
                 TextField("Name", text: $name)
                 Picker("Type", selection: $type) {
                     ForEach(types, id: \.self) { type in
-                        Text(type)
+                        Text(type.title)
                     }
                 }
                 
-                TextField("Amount", value: $amount, format: .currency(code: "USD"))
+                TextField("Amount", value: $amount, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
                     .keyboardType(.decimalPad)
             }
             .navigationTitle("Add new expense")
