@@ -26,11 +26,7 @@ struct ExpensesView: View {
                         Text(item.amount, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
                     }
                 }
-                // MARK: — Simpler approach for calling func removeItems(at:)
-                // .onDelete(perform: removeItems)
-                .onDelete(perform: { indexSet in
-                    removeItems(at: indexSet)
-                })
+                .onDelete(perform: removeItems)
             }
             .navigationTitle("iExpense")
             .toolbar {
